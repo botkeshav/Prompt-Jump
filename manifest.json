@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Prompt Jump",
+  "version": "0.1",
+
+  "permissions": ["storage", "activeTab"],
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["main.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "chatgpt-icon.png",
+    "96": "chatgpt-icon.png"
+  }
+}

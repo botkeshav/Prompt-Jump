@@ -1,0 +1,166 @@
+/* Variable replacements:
+   $bg: #F5F5F5;
+   $gray: #333333;
+   $white: #FFFFFF;
+*/
+
+*,
+*:before,
+*:after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+button:focus,
+button:active {
+  outline: none;
+  border: none;
+}
+
+html {
+  width: 200px;
+  height: 300px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: #f5f5f5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  width: 252px;
+  height: 126px;
+  background-color: #ffffff;
+
+  border-radius: calc(126px / 2);
+  box-shadow: rgba(51, 51, 51, 0.1) 0px 32px 64px 0px;
+
+  overflow: hidden;
+
+  transform: scale(0.6);
+  /* Remove default cursor since we are scaling, handle it on the button element if needed, but it helps to be specific */
+  cursor: pointer;
+}
+
+.btn .ripple.ripple--dark {
+  z-index: 1;
+  transform: scale(4.8);
+  transition: 0.6s ease;
+}
+
+.btn .ripple.ripple--light {
+  z-index: 2;
+  transform: scale(1);
+  transition:
+    z-index 0s 0.6s ease,
+    transform 0s ease;
+}
+
+/* .btn--checked state */
+.btn.btn--checked {
+  background-color: #333333;
+  transition: background-color 0.6s ease;
+}
+
+/* Removed broken changeColor animation */
+
+.btn.btn--checked .ripple.ripple--dark {
+  z-index: 2;
+  transform: scale(1);
+  transition:
+    z-index 0s 0.6s ease,
+    transform 0s ease;
+}
+
+.btn.btn--checked .ripple.ripple--light {
+  z-index: 1;
+  transform: scale(4.8);
+  transition: 0.6s ease;
+}
+
+.toggle {
+  width: 80px;
+  height: 80px;
+
+  position: absolute;
+  top: 23px;
+
+  border-radius: 50%;
+
+  z-index: 5;
+}
+
+.toggle.toggle--dark {
+  background-color: #333333;
+  left: 23px;
+}
+
+.toggle.toggle--light {
+  background-color: white;
+  right: 23px;
+}
+
+.ripple {
+  width: 80px;
+  height: 80px;
+
+  position: absolute;
+  top: 23px;
+
+  border-radius: 50%;
+}
+
+.ripple.ripple--dark {
+  background-color: #333333;
+  left: 23px;
+}
+
+.ripple.ripple--light {
+  background-color: white;
+  right: 23px;
+}
+
+/* Status Text Styling */
+.status-text {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #999;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.status-text.status--on {
+  color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #202124;
+  }
+
+  .status-text.status--on {
+    color: #e0e0e0;
+  }
+
+  .btn {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 32px 64px 0px;
+  }
+}
