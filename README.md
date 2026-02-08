@@ -44,4 +44,5 @@ For FireFox:
 5. Go to the Prompt Jump Folder and Select the main.js file
 
 
+The totally overkill animation is inspired or taken by : https://codepen.io/iremlopsum/pen/NXQjZo
 
