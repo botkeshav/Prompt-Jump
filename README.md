@@ -1,5 +1,8 @@
 [Watch Demo](https://youtu.be/PEfLQUeEpQs)
 
+![PromptJump](https://github.com/user-attachments/assets/5a6e9df7-b543-4a12-894a-18ff59f0e1f3)
+
+
 🔴 The Problem
 
 As ChatGPT conversations grow—especially when debugging code or pasting long error logs—finding a specific previous prompt becomes a chore. The standard interface requires excessive scrolling, making it easy to lose context and waste time.
@@ -39,5 +42,6 @@ For FireFox:
 3. Click on Settings icon then Debug Add-icons
 4. Then Load Temporary Add-on...
 5. Go to the Prompt Jump Folder and Select the main.js file
+
 
 
